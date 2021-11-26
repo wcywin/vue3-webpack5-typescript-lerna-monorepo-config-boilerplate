@@ -1,0 +1,23 @@
+{
+  "name": "oner",
+  "engines": {
+    "node": ">= 16.13.0"
+  },
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lerna:start": "lerna run --scope @oner/* --parallel --stream start",
+    "lerna:bootstrap": "lerna bootstrap",
+    "lerna:build": "lerna run build --parallel --stream",
+    "lerna:build:dev": "lerna run build:dev --parallel --stream",
+    "lerna:info": "lerna info",
+    "lerna:lint": "lerna run lint --parallel",
+    "lerna:link": "lerna link --force-local",
+    "serve": "lerna run --parallel serve"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
